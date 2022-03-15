@@ -1,0 +1,28 @@
+<h2>Create celebrity</h2>
+
+<form action="/celebrities/create" method="post">
+<label for="name">Name:</label>
+    <input 
+    name="name"
+    type="text"
+    placeholder="celebrity name"
+    />
+    <label for="name">Occupation:</label>
+    <input 
+    name="occupation"
+    type="text"
+    placeholder="celebrity occupation"
+    />
+    <label for="name">Catchphrase:</label>
+    <input 
+    name="catchPhrase"
+    type="text"
+    placeholder="celebrity catchphrase"
+    />
+    <button type="submit">Create your celebrity!</button>
+</form>
+
+
+{{#if error}}
+    <h1>{{error}}</h1>
+{{/if}}

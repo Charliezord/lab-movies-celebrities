@@ -1,0 +1,37 @@
+
+<h2>Create Movie</h2>
+
+<form action="/movies/create" method="POST">
+<label for="title">Title:</label>
+    <input 
+    name="title"
+    type="text"
+    placeholder="Movie title"
+    />
+    <label for="genre">Genre:</label>
+    <input 
+    name="genre"
+    type="text"
+    placeholder="movie genre"
+    />
+    <label for="plot">Plot:</label>
+    <input 
+    name="plot"
+    type="text"
+    placeholder="movie plot"
+    />
+    <label for="cast">Cast:</label>
+    <select name="cast" id="cast" multiple>
+        {{#each findCelebs}}
+        
+        <option value="{{this._id}}">{{this.name}}</option>
+        
+        {{/each}}
+    </select>
+    <button type="submit">Create your Movie!</button>
+</form> 
+
+
+{{#if error}}
+    <h1>{{error}}</h1>
+{{/if}}
